@@ -1,8 +1,10 @@
 *.rbc
 capybara-*.html
 .rspec
-/log
-/tmp
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
 /db/*.sqlite3
 /db/*.sqlite3-journal
 /public/system
@@ -11,6 +13,7 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
+
 
 # TODO Comment out these rules if you are OK with secrets being uploaded to the repo
 config/initializers/secret_token.rb
@@ -40,3 +43,6 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore Spring files.
+/spring/*.pid
