@@ -1,7 +1,7 @@
 services:
 - postgresql
 before_script:
-- psql -c 'caprese_api_test;' -U postgres
+- psql -c 'create database caprese_api_test;' -U postgres
 language: ruby
 rvm:
 - 2.3.1
