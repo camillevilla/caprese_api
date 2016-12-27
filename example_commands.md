@@ -38,6 +38,10 @@ example commands for local development:
 
 `http://localhost:3000/pomodoro_tags?pomodoro_id=1`
 
-**by tag**
+**by tag id**
 
 `http://localhost:3000/pomodoro_tags?tag_id=1`
+
+**by tag name**
+
+`http://localhost:3000/pomodoro_tags?tag=Python`

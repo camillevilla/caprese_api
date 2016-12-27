@@ -1,10 +1,17 @@
 class PomodoroTagsController < ApplicationController
   def index
     pomodorotags = PomodoroTag.all
+    # ?tag_id=1
     if tag_id = params[:tag_id]
       pomodorotags = PomodoroTag.where(tag_id: tag_id)
+    # ?pomodoro_id=1
     elsif pomodoro_id = params[:pomodoro_id]
       pomodorotags = PomodoroTag.where(pomodoro_id: pomodoro_id)
+    # ?tag=Python 
+    # add support for multiple tag queries later
+    elsif tag = params[:tag]
+      tag_id = Tag.where(name: tag)[0]
+      pomodorotags = PomodoroTag.where(tag_id: tag_id)
     end
     render json: {status: 'SUCCESS', message: 'Loaded all pomodorotags', data: pomodorotags}, status: :ok
   end
