@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
   resources :pomodoros
   resources :tags
+  resources :pomodoro_tags
 end

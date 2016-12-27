@@ -13,3 +13,7 @@ example commands for local development:
 
 ## Create
 `curl -H "Content-Type:application/json; charset=utf-8" -d '{"name":"Java"}' http://localhost:3000/tags`
+
+# PomodoroTags
+## Create
+`curl -H "Content-Type:application/json; charset=utf-8" -d '{"pomodoro_id":1, "tag_id":1}' http://localhost:3000/pomodoro_tags`
