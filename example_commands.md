@@ -1,19 +1,43 @@
 example commands for local development:
+- [curl](#curl)
+- [routes](#routes)
 
-# Pomodoros 
-## Index:
+
+# CURL
+## Pomodoros 
+**Index:**
 
 `curl http://localhost:3000/pomodoros`
 
-## Create:
+**Create:**
 
 `curl -H "Content-Type:application/json; charset=utf-8" -d '{"user_id":1, "description": "Posting from CURL"}' http://localhost:3000/pomodoros`
 
-# Tags
+## Tags
 
-## Create
-`curl -H "Content-Type:application/json; charset=utf-8" -d '{"name":"Java"}' http://localhost:3000/tags`
+**Create**
 
-# PomodoroTags
-## Create
-`curl -H "Content-Type:application/json; charset=utf-8" -d '{"pomodoro_id":1, "tag_id":1}' http://localhost:3000/pomodoro_tags`
+`curl -
+ "Content-Type:application/json; charset=utf-8" -d '{"name":"Java"}' http://localhost:3000/tags`
+
+## PomodoroTags
+**Create**
+
+`curl -
+ "Content-Type:application/json; charset=utf-8" -d '{"pomodoro_id":1, "tag_id":1}' http://localhost:3000/pomodoro_tags`
+
+# Routes
+
+## Queries
+**by user**
+
+`http://localhost:3000/pomodoros?user_id=1`
+
+## PomodoroTags
+**by pomodoro**
+
+`http://localhost:3000/pomodoro_tags?pomodoro_id=1`
+
+**by tag**
+
+`http://localhost:3000/pomodoro_tags?tag_id=1`

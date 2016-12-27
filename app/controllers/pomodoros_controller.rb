@@ -2,6 +2,9 @@ class PomodorosController < ApplicationController
 
   def index
     pomodoros = Pomodoro.all
+    if user_id = params[:user_id]
+      pomodoros = pomodoros.where(user_id: user_id)
+    end
     render json: {status: 'SUCCESS', message: 'Loaded all pomodoros', data: pomodoros}, status: :ok
   end
 
