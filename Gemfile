@@ -10,6 +10,7 @@ gem 'puma', '~> 3.0'
 # gem 'jquery-rails'
 # gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'devise_token_auth'
 gem 'rack-cors', :require => 'rack/cors'
 
 
