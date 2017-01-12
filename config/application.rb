@@ -24,8 +24,8 @@ module CapreseApi
     config.api_only = true
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-          origins '*'
-          resource '*', headers: :any, methods: [:get, :put, :delete, :options, :patch, :head]
+          origins 'localhost:3000'
+          resource '*', headers: :any, methods: [:get, :put, :delete, :options, :patch, :head], expose: ['access-token', 'expiry', 'token-type', 'uid', 'client']
       end
     end
   end
