@@ -1,4 +1,5 @@
 class TagsController < ApplicationController
+
   def index
     tags = Tag.all
     render json: {status: 'SUCCESS', message: 'Loaded all tags', data: tags}, status: :ok
@@ -10,6 +11,8 @@ class TagsController < ApplicationController
   end
 
   def create
+    puts "inside create"
+    p params
     @tag = Tag.new(tag_params)
 
     if @tag.save
