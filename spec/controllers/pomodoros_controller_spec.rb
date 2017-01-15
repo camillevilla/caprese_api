@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe PomodorosController, type: :controller do
+
+  it { should use_before_action(:authenticate_user!) }  
+
   describe "GET #index" do
     it "rejects non-authenticated users" do
       get :index
