@@ -1,4 +1,6 @@
 class PomodoroTagsController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     pomodorotags = PomodoroTag.all
     # ?tag_id=1
