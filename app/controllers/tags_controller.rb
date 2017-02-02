@@ -1,5 +1,6 @@
 class TagsController < ApplicationController
-
+  before_action :authenticate_user!
+  
   def index
     tags = Tag.all
     render json: {status: 'SUCCESS', message: 'Loaded all tags', data: tags}, status: :ok

@@ -1,4 +1,5 @@
 class PomodorosController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     pomodoros = Pomodoro.all
