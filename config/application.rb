@@ -21,5 +21,12 @@ module CapreseApi
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    config.api_only = true
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+          origins 'localhost:3000'
+          resource '*', headers: :any, methods: [:get, :put, :delete, :options, :patch, :head], expose: ['access-token', 'expiry', 'token-type', 'uid', 'client']
+      end
+    end
   end
 end

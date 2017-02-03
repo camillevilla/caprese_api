@@ -1,0 +1,12 @@
+services:
+- postgresql
+before_script:
+- psql -c 'create database caprese_api_test;' -U postgres
+language: ruby
+rvm:
+- 2.3.1
+before_install:
+- openssl aes-256-cbc -K $encrypted_3db477aec836_key -iv $encrypted_3db477aec836_iv
+  -in secrets.yml.enc -out config/secrets.yml -d
+addons:
+  postgresql: "9.4"
