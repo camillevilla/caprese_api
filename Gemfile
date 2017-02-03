@@ -13,6 +13,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise_token_auth'
 gem 'rack-cors', :require => 'rack/cors'
 
+# omniauth providers
+gem 'omniauth-github'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
