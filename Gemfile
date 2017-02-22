@@ -12,6 +12,9 @@ gem 'puma', '~> 3.0'
 gem 'jbuilder', '~> 2.5'
 gem 'devise_token_auth'
 gem 'rack-cors', :require => 'rack/cors'
+gem 'omniauth-github'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
 
 
 
